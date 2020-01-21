@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="Oyun.admin.admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <title>Oyun</title>
+    <link href="style.css" rel="stylesheet" />
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $("document").ready(function () {
+
+            $("header nav ul li.oyunlar-wrap").mouseover(function () {
+                $("header nav ul li.oyunlar-wrap .oyunlar").css("display", "block")
+            })
+            $("header nav ul li.oyunlar-wrap").mouseleave(function () {
+                $("header nav ul li.oyunlar-wrap .oyunlar").css("display", "none")
+            })
+
+        })
+    </script>
+
+    <script type="text/javascript">
+        $("document").ready(function () {
+
+            $("").mouseover(function () {
+
+                $("").css("", "")
+            })
+        })
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+  <form id="form1" runat="server">
+        
+        <div id="wrapper">
+
+            <header>
+
+                <div class="logo">
+                    LOGO
+                </div>
+
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="admindefault.aspx">Anasayfa</a>
+                        </li>
+                        <li class="oyunlar-wrap">
+                            Oyunlar
+                            <div class="oyunlar">
+                                <ul>
+                                    <li><a href="bilgisayaroyunlari.aspx">Bilgisayar Oyunları</a></li>
+                                    <li><a href="ps4oyunlari.aspx">PS4 Oyunları</a></li>
+                                    <li><a href="xboxoyunlari.aspx">XBOX Oyunları</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="addproduct.aspx">Ürün Ekleme</a>
+                        </li>
+                        <li>
+                            <a href="iletisim.aspx">İletişim</a>
+                        </li>
+                    </ul>
+
+                </nav>
+
+                <div class="arama-wrap">
+
+                    <asp:TextBox ID="txtArama" CssClass="txtArama" runat="server" placeholder="arama" />
+
+                    <asp:Button ID="btnArama" CssClass="btnArama" Text="Ara" runat="server" />
+
+                </div>
+
+
+
+            </header>
+
+            <div class="banner">
+                ..!..
+            </div>
+                <div class="icerik">
+            
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </div>
+
+            <footer>
+                Volga Günel ,Kasım 2019.
+            </footer>
+
+
+
+        </div>
+
+        
+    </form>
+</body>
+</html>

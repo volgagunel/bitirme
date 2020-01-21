@@ -1,0 +1,184 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="Oyun.main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+      <title>Oyun</title>
+    <link href="style.css" rel="stylesheet" />
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $("document").ready(function () {
+
+            $("header nav ul li.oyunlar-wrap").mouseover(function () {
+                $("header nav ul li.oyunlar-wrap .oyunlar").css("display", "block")
+            })
+            $("header nav ul li.oyunlar-wrap").mouseleave(function () {
+                $("header nav ul li.oyunlar-wrap .oyunlar").css("display", "none")
+            })
+
+        })
+    </script>
+
+    <script type="text/javascript">
+        $("document").ready(function () {
+
+            $("").mouseover(function () {
+
+                $("").css("", "")
+            })
+        })
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <div id="wrapper">
+
+            <header>
+
+                <div class="logo">
+                    
+                </div>
+
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">Anasayfa</a>
+                        </li>
+                        <li class="oyunlar-wrap">
+                            Oyunlar
+                            <div class="oyunlar">
+                                <ul>
+                                    <li><a href="bilgisayaroyunlari.aspx">Bilgisayar Oyunları</a></li>
+                                    <li><a href="ps4oyunlari.aspx">PS4 Oyunları</a></li>
+                                    <li><a href="xboxoyunlari.aspx">XBOX Oyunları</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="hakkimizda.aspx">Hakkımızda</a>
+                        </li>
+                        <li>
+                            <a href="iletisim.aspx">İletişim</a>
+                        </li>
+                    </ul>
+
+                </nav>
+
+                <div class="sepetgoster">
+                    <asp:Button ID="sepet" CssClass="btnSepet" Text="Sepete Git" OnClick="sepet_Click" runat="server" />
+
+                </div>
+
+
+                <div class="arama-wrap">
+
+
+                                  <asp:TextBox ID="txtArama" CssClass="txtArama" runat="server" placeholder="arama" />
+                                  <asp:Button ID="btnArama" CssClass="btnArama" Text="Ara" runat="server" />
+
+
+                   
+
+                </div>
+
+
+
+
+
+            </header>
+
+            <div class="banner">
+               
+            </div>
+
+            <div class="sag-taraf">
+
+                <div class="hizli-kayit">
+
+
+                    <asp:Panel ID="pnlGiris" runat="server">
+
+                    <div class="ust">
+                        Kullanıcı Girişi
+                    </div>
+
+                    <div class="alt">
+
+                        <div class="kullanici">
+                            <span>Kullanıcı adı</span>
+                            <asp:TextBox ID="txtKullaniciAdi" CssClass="textbox" runat="server" />
+                        </div>
+
+                        <div class="sifre">
+                            <span>Şifre</span>
+                            <asp:TextBox ID="txtSifre" CssClass="textbox" TextMode="Password" runat="server" />
+                        </div>
+
+                        
+                        <a href="Kaydol.aspx" class="btnKayit">Kaydol</a>
+                        <asp:Button ID="btnGiris" CssClass="btnGiris" Text ="Giriş" runat="server"   OnClick="btnGiris_Click" />
+                        <asp:Label ID="lblSonuc" Text="" runat="server" />
+
+                    </div>
+                        </asp:Panel>
+
+                    <asp:Panel ID="pnlKullanici" runat="server" CssClass="pnlKullanici">
+                        Hoşgeldiniz, <asp:Label ID="lblKullaniciAdi" Text="" runat="server" />
+                        <br />
+                        <asp:Button ID="btnCikis" Text="Çıkış" runat="server"  CssClass="KullaniciCikisi" OnClick="btnCikis_Click" />
+                    </asp:Panel>
+                </div>
+
+                <div class="yeniler">
+
+                    <div class="ust">
+                        Kategoriler
+                    </div>
+
+                    <div class="alt">
+
+                        <div class="yeniler-wrap">
+                            <ul>
+                                <asp:DataList ID="dd" runat="server">
+                                    <ItemTemplate>
+                            <li><a href="xboxoyunlari.aspx?category=<%#Eval("SubCategoryName") %>"><%#Eval("SubCategoryName") %></a></li>
+                                        </ItemTemplate>
+                                </asp:DataList>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="icerik">
+            
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </div>
+
+            <footer>
+                Volga Günel ,Kasım 2019.
+            </footer>
+
+
+
+        </div>
+
+        
+    </form>
+
+</body>
+</html>

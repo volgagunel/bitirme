@@ -1,0 +1,272 @@
+﻿body {
+    background-color: #000000;
+    font-family: 'Trebuchet MS','Arial','Comic Sans MS';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+    a:hover {
+        color: #999;
+    }
+
+
+#wrapper {
+    width: 968px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+header {
+    float: left;
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+}
+
+    header .logo {
+        float: left;
+        width: 89px;
+        height: 45px;
+        border-right: 1px solid #ff0000;
+        text-align: center;
+        line-height: 45px;
+        background-image:url('/images/logo.jpg');
+        background-size:cover;
+    }
+
+    header nav {
+        float: left;
+        width: 517px;
+        height: 45px;
+        border-right: 1px solid #ff0000;
+        line-height: 45px;
+    }
+
+
+        header nav ul {
+            list-style: none;
+        }
+
+            header nav ul li {
+                float: left;
+                margin: 0 10px;
+                color: #555;
+                cursor: default;
+            }
+
+                header nav ul li.oyunlar-wrap {
+                    position: relative;
+                }
+
+                    header nav ul li.oyunlar-wrap .oyunlar {
+                        display: none;
+                        position: absolute;
+                        width: 200px;
+                        height: 60px;
+                        background-color: #fff;
+                    }
+
+    header .sepetgoster {
+        float: left;
+        width: 100px;
+        height: 45px;
+    }
+    header .sepetgoster .btnSepet {
+        float: left;
+        width: 99px;
+        height: 45px;
+        border-left: 1px solid #ff0000;
+    }
+
+
+
+
+    header .arama-wrap {
+        float: left;
+        width: 260px;
+        height: 45px;
+    }
+
+        header .arama-wrap .txtArama {
+            float: left;
+            width: 190px;
+            padding: 10px;
+            height: 25px;
+        }
+
+        header .arama-wrap .btnArama {
+            float: left;
+            width: 49px;
+            height: 45px;
+            border-left: 1px solid #ff0000;
+        }
+
+.banner {
+    float: left;
+    margin-top: 45px;
+    width: 970px;
+    height: 260px;
+    background-color: #fff;
+    line-height: 260px;
+    text-align: center;
+    font-size: 48px;
+    background-image : url('/images/banner.jpg');
+    background-size:cover;
+}
+
+.icerik {
+    float: left;
+    width: 585px;
+    height: auto;
+    background-color: #140eb2;
+    margin-top: 45px;
+    padding: 20px;
+}
+
+.sag-taraf {
+    float: right;
+    width: 285px;
+    height: 500px;
+    margin-top: 45px;
+}
+
+    .sag-taraf .hizli-kayit {
+        float: left;
+        width: 285px;
+        height: auto;
+    }
+
+        .sag-taraf .hizli-kayit .ust {
+            float: left;
+            width: 270px;
+            height: 44px;
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+            line-height: 44px;
+            padding-left: 15px;
+            color: #555;
+        }
+
+        .sag-taraf .hizli-kayit .alt {
+            float: left;
+            width: 250px;
+            height: 190px;
+            padding: 17.5px;
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+            color: #555;
+        }
+
+            .sag-taraf .hizli-kayit .alt .sifre {
+                margin-top: 15px;
+            }
+
+            .sag-taraf .hizli-kayit .alt .textbox {
+                width: 228px;
+                height: 18px;
+                padding: 10px;
+                border: 1px solid #ccc;
+            }
+
+            .sag-taraf .hizli-kayit .alt .btnKayit {
+                float: left;
+                width: 100px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #999;            
+                cursor: pointer;
+                margin-top: 10px;
+            }
+            .sag-taraf .hizli-kayit .alt .btnGiris {
+                float: right;
+                width: 100px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #fff;
+                background-color: blue;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+
+                .sag-taraf .hizli-kayit .alt .btnGiris:hover {
+
+                    background-color: #1eb8eb;
+                }
+
+                .sag-taraf .hizli-kayit .alt .btnKayit:hover {
+
+                    background-color: gray;
+                }
+
+                .pnlKullanici {
+                    width:250px;
+                    background-color:#fff;
+                    padding:15px;
+                }
+
+
+                .KullaniciCikisi{
+                    
+                    margin-top: 10px;
+                    background-color: white;
+                    color:#0099CC;
+                    cursor: pointer;
+                }
+
+    .sag-taraf .yeniler {
+        float: left;
+        width: 285px;
+        height: auto;
+        margin-top: 45px;
+    }
+
+        .sag-taraf .yeniler .ust {
+            float: left;
+            width: 270px;
+            height: 44px;
+            line-height: 44px;
+            padding-left: 15px;
+            border-bottom: 1px solid #ccc;
+            color: #555;
+            background-color: #fff;
+        }
+
+        .sag-taraf .yeniler .alt {
+            float: left;
+            width: 250px;
+            height: auto;
+            padding: 17.5px;
+            border-bottom: 1px solid #ccc;
+            color: #555;
+            background-color: #fff;
+        }
+
+            .sag-taraf .yeniler .alt .yeniler-wrap {
+                float: left;
+                width: 100%;
+                height: auto;
+                background-color: #fff;
+            }
+
+footer {
+    float: left;
+    width: 100%;
+    height: 60px;
+    margin-top: 45px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 60px;
+    color: #555;
+}
